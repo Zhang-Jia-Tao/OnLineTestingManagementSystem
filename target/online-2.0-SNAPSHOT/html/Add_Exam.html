@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qst_Add</title>
+
+
+    <style>
+
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            outline: none;
+        }
+
+        input[type=text]:focus {
+            background-color: lightblue;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {background-color:lightskyblue;}
+    </style>
+
+</head>
+</head>
+<body background="/images/img5.jpeg">
+    <!--添加试题-->
+    <center>
+        <form action="/myWeb/exam/add" method="get">
+            <table border="2">
+                <tr>
+                    <td>题目：</td>
+                    <td><input type="text" name="title"/></td>
+                </tr>
+                <tr>
+                    <td>题目类型</td>
+                    <td><input type="text" name="style"/></td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td><input type="text" name="optionA"/></td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td><input type="text" name="optionB"/></td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td><input type="text" name="optionC"/></td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td><input type="text" name="optionD"/></td>
+                </tr>
+                <tr>
+                    <td>正确答案</td>
+                    <td>
+                        <input type="radio" name="answer" value="A">A
+                        <input type="radio" name="answer" value="B">B
+                        <input type="radio" name="answer" value="C">C
+                        <input type="radio" name="answer" value="D">D
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="新增试题"/></td>
+                    <td><input type="reset" name="reset"/></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

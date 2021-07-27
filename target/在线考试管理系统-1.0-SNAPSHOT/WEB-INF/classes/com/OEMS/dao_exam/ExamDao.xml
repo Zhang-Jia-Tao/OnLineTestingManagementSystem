@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.OEMS.dao_exam.ExamDao">
+
+    <!--添加试题-->
+    <insert id="Add_Exam">
+        insert into question values (#{questionId},#{title},#{optionA},
+                                     #{optionB},#{optionC},#{optionD},#{answer})
+    </insert>
+
+    <select id="Query_Exam" resultType="com.OEMS.demo.Question">
+        select * from question
+    </select>
+
+    <delete id="Delete_Exam">
+        delete from question where questionId = #{id}
+    </delete>
+
+    <select id="FindById_Exam" resultType="com.OEMS.demo.Question">
+        select * from question where questionId=#{questionId}
+    </select>
+
+
+    <select id="Online_Exam" resultType="com.OEMS.demo.Question">
+        select * from question order by rand() limit 0,4
+    </select>
+
+</mapper>
+
